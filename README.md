@@ -1,4 +1,4 @@
-# Combined README: AIWebApp & MLSampleAppConsole
+# AIWebApp & MLSampleAppConsole
 
 This repository contains two .NET 8 projects demonstrating machine learning and content safety integration:
 - **AIWebApp**: ASP.NET Core Web API for ML.NET model predictions
