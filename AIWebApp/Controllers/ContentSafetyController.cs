@@ -7,8 +7,8 @@ namespace AIWebApp.Controllers
     [Route("[controller]")]
     public class ContentSafetyController : Controller
     {
-        const string endpoint = "https://content-safety-demo-rak.cognitiveservices.azure.com/";
-        const string subscriptionKey = "E7GEq7pyj80jMmGaWtEU6ODrPdNab4KzeUhtZhG6iovQoUlHggNdJQQJ99BKACYeBjFXJ3w3AAAHACOGR8UT";
+        const string endpoint = "";
+        const string subscriptionKey = "";
 
         // Set the media type and blocklists
         const MediaType mediaType = MediaType.Text;
