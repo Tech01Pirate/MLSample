@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PredictiveModel_WebApi
+namespace AIWebApp
 {
     public partial class PredictiveModel
     {
@@ -52,7 +52,7 @@ namespace PredictiveModel_WebApi
             }
 
             return featurePFI;
-        }
+        }      
     }
 }
 

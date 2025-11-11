@@ -17,6 +17,9 @@ namespace AIWebApp
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Add this before builder.Build();
+            builder.Services.AddControllers();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -29,9 +32,7 @@ namespace AIWebApp
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
-            // Add this before builder.Build();
-            builder.Services.AddControllers();            
+          
 
             app.MapControllers();
 

@@ -9,7 +9,8 @@ using Microsoft.ML;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Trainers.LightGbm;
-    public partial class PredictiveModel
+using static AIWebApp.PredictiveModel;
+public partial class PredictiveModel
     {
         public const string RetrainFilePath =  @"C:\Man\Z\POC\MLPOC\MLSampleApp\MLSampleAppConsole\data.csv";
         public const char RetrainSeparatorChar = ',';
