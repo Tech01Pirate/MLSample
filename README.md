@@ -82,3 +82,64 @@ This project is for demonstration purposes. Please update with your own license 
 
 ## Contact
 For questions or support, please contact the project maintainer.
+
+
+# ContentSafetyController
+
+The `ContentSafetyController` is an ASP.NET Core API controller for text content moderation. It leverages AI-based detection to evaluate submitted text for categories such as Hate, SelfHarm, Sexual, and Violence, and returns a moderation decision based on configurable thresholds.
+
+## Features
+
+- **Text Moderation Endpoint:**  
+  Accepts text input and analyzes it for safety using AI models.
+- **Category-Based Evaluation:**  
+  Detects content in four categories: Hate, SelfHarm, Sexual, and Violence.
+- **Configurable Thresholds:**  
+  Allows setting rejection thresholds for each category.
+- **Structured Decision Output:**  
+  Returns a decision object indicating suggested action and per-category actions.
+
+## API Endpoint
+
+### POST `/ContentSafety/ValidateText`
+
+Analyzes the provided text and returns a moderation decision.
+
+**Request:**
+- Content-Type: `application/json`
+- Body:  
+  A string parameter named `message` containing the text to be analyzed.
+
+**Response:**
+- Status: `200 OK`
+- Body:  
+  A `Decision` object:
+  - `SuggestedAction`: Overall moderation action (`Accept` or `Reject`)
+  - `ActionByCategory`: Dictionary of actions per category
+
+----------------------------------------------
+# MachineAnalyzerController
+
+The `MachineAnalyzerController` is an ASP.NET Core API controller that provides machine data analysis and predictive modeling capabilities. It uses ML.NET's `PredictionEnginePool` to serve predictions based on input machine parameters.
+
+## Features
+
+- **Predictive Modeling:**  
+  Accepts machine sensor and operational data, returning predictions such as machine failure likelihood and other model outputs.
+- **RESTful API Endpoint:**  
+  Easily integrates with other systems via HTTP POST requests.
+- **Strongly-Typed Input/Output:**  
+  Uses `ModelInput` and `ModelOutput` classes for structured data exchange.
+
+## API Endpoint
+
+### POST `/MachineAnalyzer/predict`
+
+Submits machine data for analysis and receives a prediction.
+
+**Request:**
+- Content-Type: `application/json`
+- Body:  
+  A JSON object matching the `ModelInput` structure:
+
+
